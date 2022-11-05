@@ -1,28 +1,16 @@
 import React from 'react'
 import "./Box.css"
 import { useState } from 'react'
+import TextBox from "../TextBox/TextBox"
 
-
-function Box() {
-    const [color, setColor] = useState(true)
-
-    const style = color
-    ? { background: "pink" }
-    : { background: "green" };
-
-    const handleClick = () => {
-        setColor(!color);
-    }
-
-    return (
-        
-            <div className="center" >
-                <div className="box" style={style} onClick={handleClick}>The Box</div>
-            </div>
-    
+function Box({toggleColor, color, number, toLog}) {
+    const style = color ? { background:"pink" } : {background:"green" }
+    return (                
+        <div className="box" style={style} onClick={() => {
+            toggleColor();
+            toLog('sup');
+        }}>The Box</div>
     );
-
-
 }
 
 export default Box;

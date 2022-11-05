@@ -1,13 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import Box from '../Box/Box'
+import TextBox from '../TextBox/TextBox'
+
+
 
 function App() {
 
   return (
-    <div className="App">
-     <h1>Click to change color </h1>
-      <Box />
+    <div className="page">
+      <div className="App">
+        <TextBox />
+      </div>
     </div>
   )
 }

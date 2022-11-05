@@ -1,3 +1,9 @@
 .App {
   text-align: center;
 }
+
+.page {
+  width: 100wh;
+  height: 100vh;
+  background-color: rgb(230, 119, 16)
+}
