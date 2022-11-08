@@ -8,7 +8,6 @@ import Box from "../Box/Box"
 function TextBox() {
     const [color, setColor] = useState(true)
     const [boxText, setBoxText] = useState("pink")
-    const [number, setNumber] = useState(1) 
 
     const toggleColor = () => {
         setColor(!color)
@@ -18,10 +17,10 @@ function TextBox() {
 return ( 
     <div className="center">
         <div className="boxtext">The Color is {boxText}</div>
+        <button className="button" onClick={toggleColor}>toggle</button>
             <Box 
                 toggleColor={toggleColor}
                 color = {color}  
-                number = {number}
                 toLog = {(text) => console.log(text)}
             />
     </div>    
