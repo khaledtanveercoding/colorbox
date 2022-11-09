@@ -15,3 +15,8 @@
 .button {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
+
+.boxwrapper {
+    display: flex; 
+
+}

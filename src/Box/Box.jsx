@@ -1,14 +1,10 @@
 import React from 'react'
 import "./Box.css"
-import { useState, useContext } from 'react'
-import TextBox, { ToggleContext } from "../TextBox/TextBox"
 
-function Box({ toggleColor, color}) {
-    const toggleValue = useContext(ToggleContext);
-    const style = toggleValue ? { background: color } : { background: toggleColor }
+
+function Box({color}) {
     return (
-        <div className="box" style={style} onClick={() => {
-        }}>The Box</div>
+        <div className="box" style={{background: color}}>The {color} Box</div>
     );
 }
 

@@ -3,39 +3,38 @@ import { useState, createContext } from 'react'
 import "./TextBox.css"
 import Box from "../Box/Box"
 
-export const ToggleContext = createContext(true);
+// export const ToggleContext = createContext(true);
 
 function TextBox() {
-    const [color, setColor] = useState(true)
-    const [boxText, setBoxText] = useState(true);
-    const toggleColor = async () => {
-        await setColor(color ? false : true);
-        await setBoxText(boxText ? "pink" : "green")
+    const [color, setColor] = useState("pink")
+    // const [boxText, setBoxText] = useState(true);
+    const toggleColor = () => {
+        // setColor(color ? false : true);
+        setColor(color === "pink" ? "green" : "pink")
     }
 
     return (
         <div className="center">
-            <div className="boxtext">The Color is {boxText} and {boxText}</div>
-            <button className="button" onClick={() => toggleColor()}>toggle</button>
-            <ToggleContext.Provider value={color}>
+            <div className="boxtext">The Color in Box 1 {color === "pink" ? "green" : "pink"} and in Box 2 {color}</div>
+            <button className="button" onClick= {toggleColor}>toggle</button>
+            <div className="boxwrapper">
+          
                 <Box
-                    toggleColor="pink"
-                    color="green"
+                    color={color === "pink" ? "green" : "pink"}
                 />
                 <Box
-                    toggleColor="green"
-                    color="pink"
+                    color={color}
                 />
-            </ToggleContext.Provider>
+            </div>
         </div>
     )
 }
 
 
+//propdrilling  for multiple layers usestate
 
 
-
-
+//array , map over that to generate box components 
 
 export default TextBox;
 
