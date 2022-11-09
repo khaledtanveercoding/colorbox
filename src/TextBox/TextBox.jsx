@@ -7,15 +7,15 @@ export const ToggleContext = createContext(true);
 
 function TextBox() {
     const [color, setColor] = useState(true)
-    const [boxText, setBoxText] = useState('Test');
+    const [boxText, setBoxText] = useState(true);
     const toggleColor = async () => {
         await setColor(color ? false : true);
-        setBoxText =z
+        await setBoxText(boxText ? "pink" : "green")
     }
 
     return (
         <div className="center">
-            <div className="boxtext">The Color is {boxText}</div>
+            <div className="boxtext">The Color is {boxText} and {boxText}</div>
             <button className="button" onClick={() => toggleColor()}>toggle</button>
             <ToggleContext.Provider value={color}>
                 <Box
