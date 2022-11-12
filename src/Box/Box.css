@@ -1,12 +1,9 @@
-
-
 .box {
-    height: 300px;
-    width: 300px;
-    border: 10px solid black;
-
+  height: 300px;
+  width: 300px;
+  border: 10px solid black;
 }
 
 .button {
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
