@@ -6,9 +6,14 @@ import "./Box.css";
 function Box({ color }) {
   const [lock, setLock] = useState(false);
   const [localcolor, setLocalcolor] = useState("");
+  const [newbox, setNewBox] = useState([]);
 
   return (
     <div>
+      {/* <div className="boxtext">
+        The Color in this Box is
+        {localcolor === "" ? { color } : { localcolor }}
+      </div> */}
       <div
         className="box"
         style={
@@ -28,6 +33,10 @@ function Box({ color }) {
       </button>
       <button
         className="button"
+        onClick={() => {
+          setLock(false);
+          setLocalcolor("");
+        }}
       >
         unlock me
       </button>
